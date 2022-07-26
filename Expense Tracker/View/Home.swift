@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Home: View {
+    
+    @State var progress: CGFloat = 0.5
     var body: some View {
         VStack(spacing: 15) {
             
@@ -51,8 +53,10 @@ struct Home: View {
                     .lineLimit(1)
                 
 //                MARK: SpeedoMeter
+                SpeedoMeter(progress: $progress)
                 
             }
+            .padding(.top, 50)
             .frame(maxWidth: .infinity)
             .frame(height: 340)
 //            MARK: Custom Background

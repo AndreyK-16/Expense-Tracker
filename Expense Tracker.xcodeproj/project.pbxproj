@@ -13,6 +13,7 @@
 		B6FEAA41288AD64800CDA138 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6FEAA40288AD64800CDA138 /* Preview Assets.xcassets */; };
 		B6FEAA4B288ADA5400CDA138 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FEAA4A288ADA5400CDA138 /* Expense.swift */; };
 		B6FEAA4D288ADC2B00CDA138 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FEAA4C288ADC2B00CDA138 /* Home.swift */; };
+		B6FEAA51288F1D0600CDA138 /* SpeedoMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FEAA50288F1D0600CDA138 /* SpeedoMeter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		B6FEAA40288AD64800CDA138 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B6FEAA4A288ADA5400CDA138 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		B6FEAA4C288ADC2B00CDA138 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		B6FEAA50288F1D0600CDA138 /* SpeedoMeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedoMeter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				B6FEAA4C288ADC2B00CDA138 /* Home.swift */,
+				B6FEAA50288F1D0600CDA138 /* SpeedoMeter.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			files = (
 				B6FEAA4B288ADA5400CDA138 /* Expense.swift in Sources */,
 				B6FEAA3C288AD64500CDA138 /* ContentView.swift in Sources */,
+				B6FEAA51288F1D0600CDA138 /* SpeedoMeter.swift in Sources */,
 				B6FEAA4D288ADC2B00CDA138 /* Home.swift in Sources */,
 				B6FEAA3A288AD64500CDA138 /* Expense_TrackerApp.swift in Sources */,
 			);
