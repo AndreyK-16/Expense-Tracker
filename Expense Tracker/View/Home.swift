@@ -74,12 +74,29 @@ struct Home: View {
             )
             .padding(.top, 15)
             .padding(.horizontal, 15)
+            
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack(spacing: 15) {
+                    ScrollView(.horizontal) {
+                        HStack(spacing: 8) {
+//                            MARK: Months ScrollView
+                        }
+                    }
+                    .showsIndicators
+                }
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .padding(.top, 15)
         .background(
             Color("BG"))
+        .onTapGesture {
+            withAnimation {
+                progress = 0.8
+            }
+        }
     }
+        
 }
 
 struct Home_Previews: PreviewProvider {
