@@ -10,6 +10,9 @@ import SwiftUI
 struct Home: View {
     
     @State var progress: CGFloat = 0.5
+//    MARL: Current month
+    @State var currentMonth: String = "Jul"
+    @Namespace var animation
     var body: some View {
         VStack(spacing: 15) {
             
@@ -80,11 +83,34 @@ struct Home: View {
                     ScrollView(.horizontal) {
                         HStack(spacing: 8) {
 //                            MARK: Months ScrollView
+                            ForEach(months, id: \.self) { month in
+                                Text(month)
+                                    .font(.callout)
+                                    .foregroundColor(.white)
+                                    .padding(.vertical, 8)
+                                    .padding(.horizontal, 15)
+                                    .background{
+                                        if currentMonth == month {
+                                            Capsule()
+                                            .fill(.black)
+                                            .matchedGeometryEffect(id: "MONTH", in: animation)
+                                        }
+                                    }
+                                    .onTapGesture {
+                                        withAnimation(.interactiveSpring(response: 0.7, dampingFraction: 0.8, blendDuration: 0)) {
+                                            currentMonth = month
+                                            progress = progressArray[getIndex(month: month)]
+                                        }
+                                        
+                                    }
+                            }
                         }
                     }
-                    .showsIndicators
+//                    .showsIndicators
                 }
+                .padding()
             }
+            .padding(.top, 30)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .padding(.top, 15)
@@ -95,6 +121,13 @@ struct Home: View {
                 progress = 0.8
             }
         }
+    }
+    
+//    MARK: Retreiving Index
+    func getIndex(month: String) -> Int {
+        return months.firstIndex { value in
+            return month == value
+        } ?? 0
     }
         
 }
