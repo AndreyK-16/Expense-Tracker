@@ -61,10 +61,9 @@ struct SpeedoMeter: View {
                 
                 Spacer()
                 
-                Text("\(Int(progress * 100))%")
+                AnimatedNumberText(value: CGFloat(Int(progress * 100)), font: .system(size: 15, weight: .semibold), floatingPoint: 0, additionalString: "%")
             }
             .offset(y: 35)
-            .font(.system(size: 15, weight: .semibold))
             .foregroundColor(.white)
         })
         .overlay(alignment: .bottom, content: {
